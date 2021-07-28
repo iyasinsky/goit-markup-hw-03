@@ -7,7 +7,8 @@
     --button-bgc: #188ce8;
     --logo-color: #000000;
     --hero-color: #2f303a;
-    --border-line: #ececec;
+    --header-line: #ececec;
+    --border-line: #eeeeee;
 }
 
 body {
@@ -58,7 +59,7 @@ img {
 
 /* Header */
 .line {
-    border-bottom: 1px solid var(--border-line);
+    border-bottom: 1px solid var(--header-line);
 }
 
 .page-nav {
@@ -335,6 +336,7 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
 
+    border: none;
     border-radius: 4px;
     padding: 6px 22px;
     height: 38px;
@@ -357,6 +359,16 @@ img {
     color: var(--primary-color);
 }
 
+.filter-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -364,7 +376,6 @@ img {
 
 .portfolio-item {
     width: 370px;
-    background-color: coral;
     /* margin-right: 30px;
     margin-bottom: 30px; */
 }
@@ -385,10 +396,16 @@ img {
     margin-bottom: 30px;
 }
 
+.item-description {
+    padding: 20px 24px;
+    border-right: 1px solid var(--border-line);
+    border-bottom: 1px solid var(--border-line);
+    border-left: 1px solid var(--border-line);
+}
+
 .portfolio-title {
     font-size: 18px;
     line-height: 2;
-
     letter-spacing: 0.06em;
 
     color: var(--secondary-text-color);
@@ -397,7 +414,6 @@ img {
 .portfolio-text {
     font-size: 16px;
     line-height: 1.87;
-
     letter-spacing: 0.03em;
 
     color: var(--primary-text-color);
