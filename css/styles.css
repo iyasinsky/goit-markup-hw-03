@@ -7,6 +7,7 @@
     --button-bgc: #188ce8;
     --logo-color: #000000;
     --hero-color: #2f303a;
+    --border-line: #ececec;
 }
 
 body {
@@ -28,14 +29,37 @@ body {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 15px;
     width: 1200px;
-    outline: 2px solid tomato;
+    /* outline: 1px solid tomato; */
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* Header */
+.line {
+    border-bottom: 1px solid var(--border-line);
+}
 
 .page-nav {
     display: flex;
@@ -106,6 +130,12 @@ body {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    display: block;
+}
+
+.page-nav .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .logo-header {
@@ -120,6 +150,10 @@ body {
 .hero {
     background-color: var(--hero-color);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-title {
@@ -131,7 +165,6 @@ body {
     letter-spacing: 0.06em;
     margin-top: 0;
     margin-bottom: 30px;
-    padding-top: 200px;
 }
 
 .hero-button {
@@ -173,19 +206,14 @@ body {
     overflow: hidden;
 }
 
-.features-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
 .features-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .features-list .item {
     width: 270px;
-    background-color: coral;
 }
 
 .features-title {
@@ -216,13 +244,28 @@ body {
     margin-bottom: 50px;
 }
 
+.work {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nopadding {
+    padding-top: 0;
+}
+
 /* Team section*/
 .team {
     background-color: var(--secondary-color);
 }
 
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .team-card {
     background-color: var(--primary-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card-title {
@@ -230,24 +273,32 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
-    margin-top: 0;
     margin-bottom: 10px;
 }
 
 .team-card-text {
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+}
+
+.card-description {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /* Footer section*/
 .page-footer {
     background-color: var(--hero-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.page-footer .logo {
+    margin-bottom: 20px;
 }
 
 .contacts {
@@ -259,6 +310,11 @@ body {
 
 .contacts-text {
     color: var(--primary-color);
+    margin-bottom: 9px;
+}
+
+.footer-list-item {
+    margin-bottom: 9px;
 }
 
 .footer-contacts {
@@ -304,7 +360,6 @@ body {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    background-color: darkblue;
 }
 
 .portfolio-item {
