@@ -7,6 +7,7 @@
   --button-bgc: #188ce8;
   --logo-color: #000000;
   --hero-color: #2f303a;
+  --footer-contacts: rgba(255, 255, 255, 0.6);
   --header-line: #ececec;
   --border-line: #eeeeee;
 }
@@ -19,13 +20,17 @@ body {
   font-size: 14px;
 }
 
-/* Utilities */
+/* Утиліти і загальні класи*/
+
+/* Забирає крапки і відступи зі списків */
 .list {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
 
+/* Забирає нижнє підкреслювання у посилань */
 .link {
   text-decoration: none;
 }
@@ -45,6 +50,7 @@ img {
   display: block;
 }
 
+/* Візуально ховає заголовки */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -59,9 +65,12 @@ img {
   overflow: hidden;
 }
 
+/* Загальний клас для центрування тексту */
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
   width: 1200px;
 }
 
@@ -208,12 +217,15 @@ img {
 /* Our features section*/
 .features-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .features-list-item {
   width: 270px;
+  margin-right: 30px;
+}
+
+.features-list-item:last-child {
+  margin-right: 0;
 }
 
 .features-title {
@@ -246,7 +258,10 @@ img {
 
 .work {
   display: flex;
-  justify-content: space-between;
+}
+
+.work-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .nopadding {
@@ -260,12 +275,15 @@ img {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .team-card {
   background-color: var(--primary-color);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+.team-card:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-card-title {
@@ -318,7 +336,7 @@ img {
 }
 
 .footer-contacts {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-contacts);
 }
 .footer-contacts:hover,
 .footer-contacts:focus {
