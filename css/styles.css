@@ -48,6 +48,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Візуально ховає заголовки */
@@ -256,7 +258,8 @@ img {
   margin-bottom: 50px;
 }
 
-.work {
+.work,
+.team-list {
   display: flex;
 }
 
@@ -271,10 +274,6 @@ img {
 /* Team section*/
 .team {
   background-color: var(--secondary-color);
-}
-
-.team-list {
-  display: flex;
 }
 
 .team-card {
